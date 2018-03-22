@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block myblock %}
+
+    <div class="container">
+      <h3>{{message}}</h3>
+      <form method="post" action="{%url 'my_app:login_user'%}" >
+        Name<input type="text" name="user_name" >
+        password <input type="password" name="user_password" >
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+    </div>
+
+
+{% endblock %}

@@ -20,5 +20,7 @@ from my_app import views
 app_name = 'my_app'
 urlpatterns = [
 url(r'^about/$', views.about, name='about'),
-url(r'^register/$', views.register, name='register')
+url(r'^register/$', views.register, name='register'),
+url(r'^login_user/$', views.login_user, name='login_user'),
+url(r'^logout_user/$',views.logout_user, name='logout_user')
     ]
